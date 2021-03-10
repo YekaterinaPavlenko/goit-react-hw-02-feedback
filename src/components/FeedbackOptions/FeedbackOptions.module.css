@@ -13,8 +13,9 @@
 }
 
 .button {
-  min-width: 120px;
+  min-width: 200px;
   padding: 10px;
+  background-color: rgb(168, 157, 235);
   font-size: 20px;
   border-radius: 4px;
 }

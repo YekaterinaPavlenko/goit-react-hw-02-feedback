@@ -1,11 +1,11 @@
 import React from "react";
-// import s from "./Statistics.module.css";
+import s from "./Statistics.module.css";
 import PropTypes from "prop-types";
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   //   console.log(positivePercentage);
   return (
-    <ul>
+    <ul className={s.list}>
       <li key="good">
         <p>Good: {good}</p>
       </li>
