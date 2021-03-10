@@ -1,12 +1,10 @@
 import React from "react";
 import fs from "./FeedbackOptions.module.css";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  // console.dir(countFeedback);
-  // console.log(onLeaveFeedback);
-
   const optionsKeys = Object.keys(options);
+
   return (
     <ul className={fs.list}>
       {optionsKeys.map((option) => {
@@ -25,5 +23,9 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       })}
     </ul>
   );
+};
+FeedbackOptions.propTypes = {
+  options: PropTypes.object.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 export default FeedbackOptions;

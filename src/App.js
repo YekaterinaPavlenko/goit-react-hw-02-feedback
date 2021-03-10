@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import Section from "./components/Section/Section";
-
 import FeedbackOptions from "./components/FeedbackOptions/FeedbackOptions";
 import Statistics from "./components/Statistics/Statistics";
 import Notification from "./components/Notification/Notification";
@@ -12,8 +11,8 @@ class App extends Component {
     neutral: 0,
     bad: 0,
   };
+
   handleCountFeedback = ({ option }) => {
-    // console.log(option);
     this.setState((prevState) => {
       return {
         [option.toLowerCase()]: prevState[option] + 1,
@@ -30,8 +29,7 @@ class App extends Component {
 
   countPositiveFeedbackPercentage = () => {
     let totalFeedback = this.countTotalFeedback();
-    let positive = 0;
-    positive = (this.state.good * 100) / totalFeedback;
+    let positive = (this.state.good * 100) / totalFeedback;
 
     return totalFeedback === 0 ? 0 : Math.round(positive);
   };
