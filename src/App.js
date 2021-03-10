@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     let totalFeedback = this.countTotalFeedback();
-    console.log(totalFeedback);
+
     return (
       <div className="App">
         <Section title="Please leave feedback">
